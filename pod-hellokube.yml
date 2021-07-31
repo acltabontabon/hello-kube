@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: acltabontabon.hellokube
+  labels:
+    app: hellokube
+spec:
+  containers:
+    - name: hello-kube
+      image: acltabontabon/hello-kube
+      ports:
+        - containerPort: 8080
