@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hellokube-controller
+spec:
+  replicas: 2
+  selector:
+    app: hellokube
+  template:
+    metadata:
+      labels:
+        app: hellokube
+    spec:
+      containers:
+        - name: hello-kube
+          image: acltabontabon/hello-kube
+          ports:
+            - containerPort: 8080
